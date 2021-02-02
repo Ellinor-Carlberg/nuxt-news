@@ -6,7 +6,8 @@ const createStore = () => {
         state: {
         headlines: [],
         loading: false,
-        category: ''
+        category: '',
+        country: 'us',
         },
         mutations: {
 
@@ -18,6 +19,9 @@ const createStore = () => {
             },
             setCategory(state, category) {
                 state.category = category;
+            },
+            setCountry(state, country) {
+                state.country = country;
             }
         },
         actions: {
@@ -31,7 +35,8 @@ const createStore = () => {
         getters: {
             headlines: state => state.headlines,
             loading: state => state.loading, 
-            category: state => state.category
+            category: state => state.category,
+            country: state => state.country
         }
     });
 }
