@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'spa',
+  ssr: false,
 
   /*
   ** Headers of the page
@@ -60,6 +60,10 @@ module.exports = {
     "/api/": {
       target: "https://newsapi.org/v2/",
       pathRewrite: { "^/api/": "" } 
+    },
+    "/register/": {
+      target: "https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyBC4M2O0ZBfJyciXfb9jpraDD0lzoRepuU",
+      pathRewrite: { "^/register/": "" }
     }
   },
 
